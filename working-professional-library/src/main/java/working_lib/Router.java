@@ -33,5 +33,7 @@ public void setBandwidth(float bandwidth) {
 	this.bandwidth = bandwidth;
 }
 
-
+public void updateDamage(float u) {
+	System.out.println(" the damage log has been updated with file number "+u);
+}
 }

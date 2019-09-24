@@ -10,7 +10,7 @@ public class PlumbingProfessionalTest {// test code used to check if the method 
 	@Test
  public void shouldFixPipes()
  {
-		PlumbingProfessional plumber = new PlumbingProfessional(1,"jon");
+		PlumbingProfessional plumber = new PlumbingProfessional(0, "jon", 0, null);
 		
 		boolean results = plumber.fixPipe(null, null);
 		assertTrue(results);

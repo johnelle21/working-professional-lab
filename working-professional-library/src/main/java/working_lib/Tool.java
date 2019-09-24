@@ -1,6 +1,11 @@
 package working_lib;
 
 public  abstract class Tool {
+	@Override
+	public String toString() {
+		return "brand=" + brand + " ";
+	}
+
 	private String brand;
 	
 	

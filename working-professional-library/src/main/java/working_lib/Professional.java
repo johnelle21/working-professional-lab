@@ -1,17 +1,34 @@
 package working_lib;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Professional {
 	private int id;
 	private String name;
 	private float salary;
-	private ArrayList<Certification> certifications;
+	private List<Certification> certifications;
 
-	public Professional(int id, String name ) {
-		this.id = id;
+	public Professional( String name ) {
 		this.name = name;
 		
+	}
+	
+
+	public Professional(int id, String name, float salary, List<Certification> certlist) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.certifications = certlist;
+	}
+
+	public Professional() {
+		super();
+		id = 0;
+		name = "name";
+		salary=0.0f;
+		certifications = null;
 	}
 
 	public int getId() {
@@ -38,7 +55,7 @@ public class Professional {
 		this.salary = salary;
 	}
 
-	public ArrayList<Certification> getCertifications() {
+	public List<Certification> getCertifications() {
 		return certifications;
 	}
 
@@ -46,9 +63,10 @@ public class Professional {
 		this.certifications = certifications;
 	}
 
-	public void addCertification(Certification k) {
-		// for (int i=0;i<Certification.length)
-		// consider method to add on to an array list
+	public void addCertification(Certification k) {// supposed to add certificates to the person list
+		List<Certification>list = new ArrayList<Certification>();// creates an array list 
+		list.add(k);
+		
 	}
 
 }

@@ -1,7 +1,7 @@
 package working_lib;
 
-public class PvcPipe extends Pipe  {
-	private String colour ;
+public class PvcPipe extends Pipe {
+	private String colour;
 
 	public String getColour() {
 		return colour;
@@ -16,10 +16,19 @@ public class PvcPipe extends Pipe  {
 		this.colour = colour;
 	}
 
-	public void updateDamage(float u) {
-		// TODO Auto-generated method stub
-		
+	public PvcPipe() {
+		super();
+		colour = "";
 	}
-	
+
+	public void updateDamage(float u) {
+		System.out.println(" the damage log has been updated with file number "+u);
+	}
+
+	@Override
+	public String toString() {
+		return "PvcPipe [colour=" + colour + "]";
+	}
+
 
 }

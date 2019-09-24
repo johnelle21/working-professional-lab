@@ -1,18 +1,25 @@
 package working_lib;
 
-public abstract class Pipe implements IBreakableItem{
+public abstract class Pipe implements IBreakableItem {
 	protected float length;
 	protected float diameter;
-	
+	protected String name ;
+
 	public Pipe(float length, float diameter) {
-		
+
 		this.length = length;
 		this.diameter = diameter;
+		name="Pipe";
 	}
-	
-	public Pipe() {	
-		length =0;
-		diameter =0;
+
+	public String getName() {
+		return name;
+	}
+
+
+	public Pipe() {
+		length = 0;
+		diameter = 0;
 	}
 
 	public float getLength() {
@@ -30,7 +37,8 @@ public abstract class Pipe implements IBreakableItem{
 	public void setDiameter(float diameter) {
 		this.diameter = diameter;
 	}
-	
-	
 
+	public void updateDamage(float u) {
+		System.out.println(" the damage log has been updated with file number "+u);
+	}
 }

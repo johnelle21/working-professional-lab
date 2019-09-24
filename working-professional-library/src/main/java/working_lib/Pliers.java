@@ -9,6 +9,11 @@ public class Pliers extends Tool {
 		this.colour = colour;
 	}
 
+	public Pliers(String brand) {
+		super(brand);
+		
+	}
+
 	public Pliers() {
 		super();
 		colour = "colour";
@@ -27,5 +32,15 @@ public class Pliers extends Tool {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public String toString() {
+		return " " + colour + " " + super.toString() + " " + getBrand()
+				+ "";
+	}
+
+	
+	
+	
 
 }

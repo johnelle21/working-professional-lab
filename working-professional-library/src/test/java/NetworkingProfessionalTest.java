@@ -9,7 +9,7 @@ public class NetworkingProfessionalTest { // test code used to check if the meth
 	@Test
 	public void shouldFixRouter()
 	 {
-		NetworkingProfessional k = new NetworkingProfessional(0, null);
+		NetworkingProfessional k = new NetworkingProfessional( 0, null, 0, null);
 		
 		 boolean result = k.fixRouter(null, null);
 		 
