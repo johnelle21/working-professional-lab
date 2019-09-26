@@ -1,20 +1,40 @@
-images: maven:latest
+image: maven:latest
 
 stages:
   - build
   - test
+  - package
 
-variables :
- MAVEN_CLI_OPTS: " --batch-mode"
- MAVEN_OPTS: "-Dmaven.repo.local=./../.m2/repository"
+variables:
+  MAVEN_CLI_OPTS: " --batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=./../.m2/repository"
 
 cache:
- paths:
-   - .m2/repository/
+  paths:
+    - .m2/repository/
 
 build:
- stage: build 
- script:
-  - cd calulator-lib
-  - mvn $MAVEN_CLI_OPTS compile
+  stage: build
+  script:
+    - cd working-professional-lab
+    - mvn $MAVEN_CLI_OPTS compile
+   
 
+test:
+  stage: test
+  script:
+   - cd working-professional-lab
+   - mvn $MAVEN_CLI_OPTS test
+   
+
+package:
+  stage: package
+  script:
+   - cd working-professional-lab
+   - mvn $MAVEN_CLI_OPTS package
+   
+  artifacts:
+    paths:
+    - /working-professional-app
+    - /working-professional-library
+   
