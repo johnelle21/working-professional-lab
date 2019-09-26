@@ -18,12 +18,11 @@ public class PlumbingProfessional extends Professional implements IPlumbingProfe
 	}
 
 
+	@SuppressWarnings("unused")
 	public boolean fixPipe(Pipe a, Tool v) {
 		System.out.println("The " + v.getBrand() + " is being used to fix the " + a.getName());
-		if (a == null || v == null) {
-			return true;
-		}
-		return false;
+		
+		return true;
 	}
 
 }

@@ -32,10 +32,7 @@ public class NetworkingProfessional extends Professional implements INetworkingP
 	public boolean fixRouter(Router a, Tool v) {//fix router method used by netProfesses only 
 		
 		System.out.println("The "+v+" is being used to fix the "+a);
-		if (a == null || v == null) {
+	
 			return true;
-		}
-		return false;
 	}
-
 }
